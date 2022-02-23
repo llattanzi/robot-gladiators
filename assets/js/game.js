@@ -151,7 +151,7 @@ var endGame = function() {
         highScore = 0;
     }
     //  if player has more money than the high score, player has new high score!
-    if (playerInfo.money > highscore) {
+    if (playerInfo.money > highScore) {
         localStorage.setItem("highscore", playerInfo.money);
         localStorage.setItem("name", playerInfo.name);
         
@@ -219,10 +219,10 @@ var getPlayerName = function() {
 }
 
 var playerInfo = {
-    Name: getPlayerName(),
-    Health: 100,
-    Attack: 10,
-    Money: 10,
+    name: getPlayerName(),
+    health: 100,
+    attack: 10,
+    money: 10,
     reset: function() {
         this.health = 100;
         this.money = 10;
